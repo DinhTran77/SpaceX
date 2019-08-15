@@ -16,7 +16,6 @@ const App: React.FC = () => {
       {
         console.log(response.data);
         setNews(response.data);
-        // setLoading(false);
       });
     }, 2000);
   }, []);
@@ -24,7 +23,12 @@ const App: React.FC = () => {
   return (
     <React.Fragment>
       <Header></Header>
-      <Card title="Dinhs page" date={new Date(new Date().getDate())} details="dddd" wikiLink= {new URL('https://example.org/')}></Card>
+      {news.map((item:any)=>
+        {
+         return(<Card key={item.id} title={item.title} date={item.event_date_utc} details={item.details} wikiLink= {item.links.wikipedia}></Card>)
+        })
+        }
+
     </React.Fragment>
   );
 }
