@@ -1,0 +1,36 @@
+.navBarContainer{
+    display: flex;
+    align-items: center;
+}
+
+.logoContainer{
+       flex:3;
+}
+
+.logo{
+    width: 20%;
+    height: auto;
+    margin-left: 3%;
+}
+
+.navBar{
+    flex: 1;
+    /* background-color:green; */
+}
+
+.navBarContainer .navBar{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    margin-right: 4%;
+}
+
+.navBarContainer a{
+    text-decoration: none;
+
+}
+
+.navBarContainer li{
+    list-style-type: none;
+}

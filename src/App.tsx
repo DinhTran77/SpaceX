@@ -1,8 +1,13 @@
 import React, {useEffect, useState} from 'react';
+import {Route, Switch, Redirect} from 'react-router-dom';
 import axios from 'axios';
-import './App.css';
 import Header from './Components/Header/Header';
 import Card from './Components/Card/Card';
+import style from './App.module.css';
+import { interpreterDirective } from '@babel/types';
+import HomePage from './Components/HomePage/HomePage';
+import NavBar from './Components/NavBar/NavBar';
+import Rockets from './Components/Rockets/Rockets';
 
 const App: React.FC = () => {
 
@@ -16,19 +21,26 @@ const App: React.FC = () => {
       {
         console.log(response.data);
         setNews(response.data);
+      }).catch(function (error) {
+        // handle error
+        console.log(error);
       });
     }, 2000);
   }, []);
   
   return (
     <React.Fragment>
-      <Header></Header>
-      {news.map((item:any)=>
-        {
-         return(<Card key={item.id} title={item.title} date={item.event_date_utc} details={item.details} wikiLink= {item.links.wikipedia}></Card>)
-        })
-        }
+      <section className={style.pageContainer}>
+            <NavBar></NavBar>      
+            <section className={style.content}>
+                <Switch>
+                  
+                  <Route exact path='/' render={(props)=><HomePage news={news}/>}/>
+                  <Route exact path='/rockets' render={(props)=><Rockets/>}/>
 
+                </Switch>
+            </section>
+      </section>
     </React.Fragment>
   );
 }

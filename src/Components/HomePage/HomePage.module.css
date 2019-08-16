@@ -1,0 +1,15 @@
+.grid{
+    display: grid;
+    grid-template-columns: auto;
+    /* position:absolute; */
+}
+
+.heroContainer{
+    position: relative;
+    /* width: 100%; */
+    /* height: auto; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}

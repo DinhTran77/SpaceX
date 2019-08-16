@@ -1,0 +1,10 @@
+.cardContainer{
+    outline:1px solid black;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    background-color: #fff;
+    /* position: absolute; */
+    /* left:10%;
+    top: 0; */
+}
