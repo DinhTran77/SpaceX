@@ -8,6 +8,7 @@ import { interpreterDirective } from '@babel/types';
 import HomePage from './Components/HomePage/HomePage';
 import NavBar from './Components/NavBar/NavBar';
 import Rockets from './Components/Rockets/Rockets';
+import About from './Components/About/About';
 
 const App: React.FC = () => {
 
@@ -37,6 +38,7 @@ const App: React.FC = () => {
                   
                   <Route exact path='/' render={(props)=><HomePage news={news}/>}/>
                   <Route exact path='/rockets' render={(props)=><Rockets/>}/>
+                  <Route exact path='/about' render={(props)=><About/>}></Route>
 
                 </Switch>
             </section>

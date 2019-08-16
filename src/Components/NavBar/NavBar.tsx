@@ -14,7 +14,7 @@ const NavBar = () => {
                     
                     <li><Link to='/'>History</Link></li>
                     <li><Link to='/rockets'>Rockets</Link></li>
-                    <li><a href='#'>About</a></li>
+                    <li><Link to='/about'>About</Link></li>
                 </ul>   
             </nav>
     </React.Fragment>
