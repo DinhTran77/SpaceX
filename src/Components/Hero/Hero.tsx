@@ -14,7 +14,7 @@ const Hero = () => {
             <section className={style.videoContainer}>
                 <h1>Space X News</h1>
                 <div className={style.overlay}></div>
-                <video className={style.video} muted loop autoPlay poster={videoPosterURL}>                
+                <video controls className={style.video} muted loop autoPlay poster={videoPosterURL}>                
                     <source src={videoMp4} type="video/mp4"></source>
                     <source src={videoOgv} type="video/ogg"></source>
                     <source src={videoWebm} type='video/webm'></source>

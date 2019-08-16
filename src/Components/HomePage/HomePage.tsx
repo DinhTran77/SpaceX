@@ -8,16 +8,19 @@ import NavBar from '../NavBar/NavBar';
 const HomePage = (props:any) => {
     return (
       <React.Fragment>
-        <section className={style.heroContainer}>
-            <Hero/>
-            {/* <div className={style.grid}>
-              {props.news.map((item:any)=>
-                {
-                return(<Card key={item.id} title={item.title} date={item.event_date_utc} details={item.details} wikiLink= {item.links.wikipedia}></Card>)
-                })
-              }
-            </div> */}
-          </section>
+        <section className={style.contentContainer}>
+            <section className={style.heroContainer}>
+                <Hero/>
+            </section>
+          
+            <div className={style.grid}>
+                    {props.news.map((item:any)=>
+                      {
+                      return(<Card key={item.id} title={item.title} date={item.event_date_utc} details={item.details} wikiLink= {item.links.wikipedia}></Card>)
+                      })
+                    }
+                  </div>
+            </section>
       </React.Fragment>
     )
 }

@@ -1,15 +1,16 @@
+.heroContainer{
+    /* display: flex;
+    flex-direction: column; */
+    /* position: relative; */
+}
+
 .grid{
     display: grid;
     grid-template-columns: auto;
-    /* position:absolute; */
+    background-color: green;
+    position:relative;
 }
 
-.heroContainer{
-    position: relative;
-    /* width: 100%; */
-    /* height: auto; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+.contentContainer{
+    height: 50%;
 }
