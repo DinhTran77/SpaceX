@@ -1,16 +1,18 @@
-.heroContainer{
-    /* display: flex;
-    flex-direction: column; */
-    /* position: relative; */
+.contentContainer{
+    /* height: 50%; */
+    position:relative;
+    display: flex;
+    flex-direction: column;
 }
 
-.grid{
+/* .grid{
     display: grid;
     grid-template-columns: auto;
     background-color: green;
-    position:relative;
-}
+} */
 
-.contentContainer{
-    height: 50%;
+.heroContainer{
+    /* position: absolute;
+    left: 0;
+    top: 0; */
 }

@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import App from '../../App';
+import '../../CSS/reset.css'
 import style from './Hero.module.css';
 import videoPosterURL from '../../Images/rocket.jpg';
 import videoMp4 from '../../Images/video.mp4';
@@ -11,9 +12,11 @@ import videoOgv from '../../Images/video.ogv';
 const Hero = () => {
     return (
         <React.Fragment>
-            <section className={style.videoContainer}>
+            <section className={style.heroContainer}>
                 <h1>Space X News</h1>
+
                 <div className={style.overlay}></div>
+
                 <video controls className={style.video} muted loop autoPlay poster={videoPosterURL}>                
                     <source src={videoMp4} type="video/mp4"></source>
                     <source src={videoOgv} type="video/ogg"></source>

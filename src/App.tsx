@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {Route, Switch, Redirect} from 'react-router-dom';
 import axios from 'axios';
+import 'normalize.css';
 import Header from './Components/Header/Header';
 import Card from './Components/Card/Card';
 import style from './App.module.css';
@@ -9,6 +10,7 @@ import HomePage from './Components/HomePage/HomePage';
 import NavBar from './Components/NavBar/NavBar';
 import Rockets from './Components/Rockets/Rockets';
 import About from './Components/About/About';
+
 
 const App: React.FC = () => {
 
