@@ -1,0 +1,14 @@
+.loadingAnimation{
+    width: 30%;
+    position: absolute;
+    z-index: 4;
+    font-size: 3em;
+    color: white;
+    margin: 0 auto;
+    bottom: 3%;
+}
+/* position: absolute;
+z-index: 4;
+color: white;
+font-size: 2em;
+width: 5%; */

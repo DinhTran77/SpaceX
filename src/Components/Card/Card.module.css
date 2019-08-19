@@ -1,8 +1,22 @@
 .cardContainer{
-    outline:1px solid black;
-    display: flex;
-    flex-direction: column;
-    width: 40%;
-    background-color: #fff;
+    width: 60%;
+    color: rgb(196, 194, 194);
+    background-color: #181727;
     margin: 2% 0 2% 0;
+    /* border: 2px solid; */
+    border-radius: 25px;
+    padding: 2%;
 }
+
+.cardContainer h2{
+text-transform: uppercase;
+font-weight: bold;
+}
+
+.cardContainer h3{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+

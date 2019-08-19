@@ -1,9 +1,17 @@
 .heroContainer{
-    height: 600px;
+    height: 100%;
     background-color: green;
+    position: relative;
 }
 
 .contentContainer{
     height: 100vh;
     overflow: scroll;
+}
+
+.grid{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

@@ -12,9 +12,11 @@ import Rockets from './Components/Rockets/Rockets';
 import About from './Components/About/About';
 
 
+
 const App: React.FC = () => {
 
-  const [news, setNews]  = useState([])
+  const [news, setNews]  = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
   
   useEffect(() => {
     const loadingTimer = setTimeout(() => 
@@ -24,6 +26,7 @@ const App: React.FC = () => {
       {
         console.log(response.data);
         setNews(response.data);
+        setIsLoading(false);
       }).catch(function (error) {
         // handle error
         console.log(error);
@@ -38,7 +41,7 @@ const App: React.FC = () => {
             <section className={style.content}>
                 <Switch>
                   
-                  <Route exact path='/' render={(props)=><HomePage news={news}/>}/>
+                  <Route exact path='/' render={(props)=><HomePage isLoading={isLoading} news={news}/>}/>
                   <Route exact path='/rockets' render={(props)=><Rockets/>}/>
                   <Route exact path='/about' render={(props)=><About/>}></Route>
 
