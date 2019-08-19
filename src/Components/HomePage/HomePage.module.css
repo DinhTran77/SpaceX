@@ -1,18 +1,9 @@
-.contentContainer{
-    /* height: 50%; */
-    position:relative;
-    display: flex;
-    flex-direction: column;
+.heroContainer{
+    height: 600px;
+    background-color: green;
 }
 
-/* .grid{
-    display: grid;
-    grid-template-columns: auto;
-    background-color: green;
-} */
-
-.heroContainer{
-    /* position: absolute;
-    left: 0;
-    top: 0; */
+.contentContainer{
+    height: 100vh;
+    overflow: scroll;
 }
