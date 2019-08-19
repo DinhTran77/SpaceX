@@ -1,5 +1,8 @@
 import React, {useEffect, useState} from 'react'
 import axios from 'axios'
+import { readFile } from 'fs'
+import style from './Rockets.module.css'
+import CardRocket from '../CardRocket/CardRocket';
 
 const Rockets = () => {
 
@@ -23,11 +26,15 @@ useEffect(
     return (
        <React.Fragment>
            {
-               rockets.map(
-                   (item:any)=>{
-                       return <div>{item.rocket_name}</div>
-                   }
-               )
+               <section className={style.rocketsPageContainer}>
+                    {rockets.map(
+                        (item:any)=>{
+                            return (
+                                <CardRocket item={item}></CardRocket>
+                                    )
+                        })
+                        }
+               </section>
            }
 
        </React.Fragment>

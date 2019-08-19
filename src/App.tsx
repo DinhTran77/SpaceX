@@ -3,7 +3,7 @@ import {Route, Switch, Redirect} from 'react-router-dom';
 import axios from 'axios';
 import 'normalize.css';
 import Header from './Components/Header/Header';
-import Card from './Components/Card/Card';
+import CardHistory from './Components/CardHistory/Card';
 import style from './App.module.css';
 import { interpreterDirective } from '@babel/types';
 import HomePage from './Components/HomePage/HomePage';

@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from '../Header/Header';
 import style from './HomePage.module.css';
-import Card from '../Card/Card';
+import CardHistory from '../CardHistory/Card';
 import Hero from '../Hero/Hero';
 import NavBar from '../NavBar/NavBar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -16,14 +16,13 @@ const HomePage = (props:any) => {
 
               <div className={style.heroContainer}>
                  <Hero isLoading={props.isLoading}/> 
-
               </div>
             
           
               <div className={style.grid}>
                       {props.news.map((item:any)=>
                         {
-                        return(<Card key={item.id} title={item.title} date={item.event_date_utc} details={item.details} wikiLink= {item.links.wikipedia}></Card>)
+                        return(<CardHistory key={item.id} title={item.title} date={item.event_date_utc} details={item.details} wikiLink= {item.links.wikipedia}></CardHistory>)
                         })
                       }
               </div>

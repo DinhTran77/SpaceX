@@ -1,0 +1,15 @@
+/* .rocket{
+    width: 20%;
+} */
+
+.rocketsPageContainer{
+    width: 100vw;
+    height: 100vh;
+    overflow: scroll;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 3%;
+    grid-template-rows: 280px;
+    background-color: #D3DBDE;
+    padding: 2% 2% 0 2%;
+}

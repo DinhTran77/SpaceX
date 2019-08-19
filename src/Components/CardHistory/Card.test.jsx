@@ -7,7 +7,7 @@ import { BrowserRouter } from 'react-router-dom';
 
        test("Card renders without crashing", ()=>
             {
-                const div = document.createElement('Card');
-                ReactDom.render(<BrowserRouter><App /></BrowserRouter>, div);
+                const Card = document.createElement('Card');
+                ReactDom.render(<BrowserRouter><App /></BrowserRouter>, Card);
             }
         );

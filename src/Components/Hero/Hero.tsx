@@ -17,6 +17,7 @@ const Hero = (props:any) => {
                 <h1>Space X News</h1>
                 
                 <Loading isLoading={props.isLoading}></Loading>
+                
                 <div className={style.overlay}></div>
 
                 <video controls className={style.video} muted loop autoPlay poster={videoPosterURL}>                

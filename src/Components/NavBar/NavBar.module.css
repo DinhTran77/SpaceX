@@ -1,6 +1,7 @@
 .navBarContainer{
     display: flex;
     align-items: center;
+    height: 11vh;
 }
 
 .logoContainer{
@@ -15,7 +16,6 @@
 
 .navBar{
     flex: 1;
-    /* background-color:green; */
 }
 
 .navBarContainer .navBar{
