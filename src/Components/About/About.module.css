@@ -1,13 +1,32 @@
 .table, th, td {
-    border: 1px solid black;
+    /* border: 1px solid black; */
+    
   }
 
+
+
+.row_title{
+    white-space: nowrap;       
+}
+
+.row_content{
+    padding-left: 7%;
+}
+
   .table{
-      width: 50%;
+      color: rgb(235, 233, 233);
+      width:60%;
+      background-color: rgba(255, 255, 255, 0.5);
   }
-  .tableContainer{
+
+  .container{
       display: flex;
       justify-content: center;
-      width: 100%;
-      margin-top: 5%;
+      align-items: center;
+      width: 100vw;
+      height: 100vh;
+      background-image: url('../../Images/space.jpg');
+      background-size: cover;
   }
+
+  

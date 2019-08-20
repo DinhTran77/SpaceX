@@ -40,7 +40,6 @@ const App: React.FC = () => {
             <NavBar></NavBar>      
             <section className={style.content}>
                 <Switch>
-      
                   <Route exact path='/' render={(props)=><HomePage isLoading={isLoading} news={news}/>}/>
                   <Route exact path='/rockets' render={(props)=><Rockets/>}/>
                   <Route exact path='/about' render={(props)=><About/>}></Route>

@@ -14,10 +14,7 @@ const Hero = (props:any) => {
     return (
         <React.Fragment>
             <section className={style.heroContainer}>
-                <h1>Space X News</h1>
-                
-                <Loading isLoading={props.isLoading}></Loading>
-                
+                <h1>Space X News</h1>         
                 <div className={style.overlay}></div>
 
                 <video controls className={style.video} muted loop autoPlay poster={videoPosterURL}>                

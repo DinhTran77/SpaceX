@@ -1,5 +1,8 @@
 .heroContainer{
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .contentContainer{
@@ -9,6 +12,16 @@
 .grid{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center;
+    align-items: center; */
+}
+
+.chevron{
+    width: 30%;
+    position: absolute;
+    z-index: 4;
+    font-size: 3em;
+    color: white;
+    /* margin: 0 auto; */
+    bottom: 3%;
 }

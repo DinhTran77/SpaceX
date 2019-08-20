@@ -15,7 +15,11 @@ const HomePage = (props:any) => {
         <section className={style.contentContainer}>
 
               <div className={style.heroContainer}>
-                 <Hero isLoading={props.isLoading}/> 
+                
+                 <Hero/> 
+                 
+                 {props.isLoading?(<Loading className={style.loadingAnimation} isLoading={props.isLoading}></Loading>):(<FontAwesomeIcon icon={faChevronDown} className={style.chevron}/>)}
+                 
               </div>
             
           

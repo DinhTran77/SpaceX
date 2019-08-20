@@ -2,36 +2,43 @@ import React, {useEffect, useState} from 'react'
 import axios from 'axios'
 import { instanceOf } from 'prop-types';
 import style from './About.module.css'
+import Loading from './../Loading/Loading';
 
 const About = () => 
     {
 
         const [post, setPost] = useState({} as any)
+        const [isLoading, setIsLoading] = useState(true);
     
         useEffect
             (
-                () => 
-                    {
+                () => {
+
+                    const loadingTimer = setTimeout
+                    (() =>{
                     axios.get('https://api.spacexdata.com/v3/info').then((response) => 
                         {
-                            console.log(response.data);
                             setPost(response.data);
+                            setIsLoading(false);
                         })
+                    }, 2000);
                     }, []
             );
     
             return(
                <React.Fragment>
-                   <div className={style.tableContainer}>
-                    <table className={style.table}>
-                        <tr><td>Name:</td> <td>{post.name as any}</td></tr>
-                        <tr><td>Founding year:</td> <td>{post.founded as any}</td></tr>
-                        <tr><td>CEO:</td> <td>{post.ceo as any}</td></tr>
-                        <tr><td>COO:</td> <td>{post.coo as any}</td></tr>
-                        <tr><td>Valuation:</td> <td>{post.valuation as any}</td></tr>
-                        <tr><td>Summary:</td> <td>{post.summary as any}</td></tr>
-                    </table>
-                   </div>
+                <div className={style.container}>
+                        {isLoading?(<Loading></Loading>):(   
+                                    <table className={style.table}>
+                                        <tr><td className={style.row_title}>Name:</td> <td className={style.row_content}>{post.name as any}</td></tr>
+                                        <tr><td className={style.row_title}>Founding year:</td> <td className={style.row_content}>{post.founded as any}</td></tr>
+                                        <tr><td className={style.row_title}>CEO:</td> <td className={style.row_content}>{post.ceo as any}</td></tr>
+                                        <tr><td className={style.row_title}>COO:</td> <td className={style.row_content}>{post.coo as any}</td></tr>
+                                        <tr><td className={style.row_title}>Valuation:</td> <td className={style.row_content}>{post.valuation as any}</td></tr>
+                                        <tr><td className={style.row_title}>Summary:</td> <td className={style.row_content}>{post.summary as any}</td></tr>
+                                    </table>
+                        )}
+                </div>
                </React.Fragment>
             )
     }

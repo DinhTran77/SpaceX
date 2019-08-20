@@ -1,8 +1,6 @@
-/* .rocket{
-    width: 20%;
-} */
 
 .rocketsPageContainer{
+    font-size: .8em;
     width: 100vw;
     height: 100vh;
     overflow: scroll;
@@ -12,4 +10,12 @@
     grid-template-rows: 280px;
     background-color: #D3DBDE;
     padding: 2% 2% 0 2%;
+    justify-items: center;
+    align-items: center;
+}
+
+.loading{
+    width: 10%;
+    /* position: absolute; */
+    /* margin: 0 auto; */
 }
