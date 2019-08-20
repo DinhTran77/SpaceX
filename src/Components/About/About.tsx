@@ -21,7 +21,7 @@ const About = () =>
                             setPost(response.data);
                             setIsLoading(false);
                         })
-                    }, 2000);
+                    }, 1000);
                     }, []
             );
     
@@ -34,7 +34,7 @@ const About = () =>
                                         <tr><td className={style.row_title}>Founding year:</td> <td className={style.row_content}>{post.founded as any}</td></tr>
                                         <tr><td className={style.row_title}>CEO:</td> <td className={style.row_content}>{post.ceo as any}</td></tr>
                                         <tr><td className={style.row_title}>COO:</td> <td className={style.row_content}>{post.coo as any}</td></tr>
-                                        <tr><td className={style.row_title}>Valuation:</td> <td className={style.row_content}>{post.valuation as any}</td></tr>
+                                        <tr><td className={style.row_title}>Valuation:</td> <td className={style.row_content}>${post.valuation as any}</td></tr>
                                         <tr><td className={style.row_title}>Summary:</td> <td className={style.row_content}>{post.summary as any}</td></tr>
                                     </table>
                         )}
