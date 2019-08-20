@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {Route, Switch, Redirect} from 'react-router-dom';
+import {Route, Switch, Redirect, Router} from 'react-router-dom';
 import axios from 'axios';
 import 'normalize.css';
 import Header from './Components/Header/Header';
@@ -10,7 +10,7 @@ import HomePage from './Components/HomePage/HomePage';
 import NavBar from './Components/NavBar/NavBar';
 import Rockets from './Components/Rockets/Rockets';
 import About from './Components/About/About';
-
+// import BrowserHistory from 'react-router/lib/BrowserHistory';
 
 
 const App: React.FC = () => {
@@ -40,11 +40,10 @@ const App: React.FC = () => {
             <NavBar></NavBar>      
             <section className={style.content}>
                 <Switch>
-                  
+      
                   <Route exact path='/' render={(props)=><HomePage isLoading={isLoading} news={news}/>}/>
                   <Route exact path='/rockets' render={(props)=><Rockets/>}/>
                   <Route exact path='/about' render={(props)=><About/>}></Route>
-
                 </Switch>
             </section>
       </section>

@@ -3,10 +3,16 @@ import axios from 'axios'
 import { readFile } from 'fs'
 import style from './Rockets.module.css'
 import CardRocket from '../CardRocket/CardRocket';
+import RocketDetails from '../RocketDetails/RocketDetails';
 
 const Rockets = () => {
 
 const [rockets, setRockets] = useState([]);
+const [selectedRocket, setSelectedRocket] = useState({});
+
+window.onpopstate  = (e) => {
+    window.history.go(0);
+    }
 
 useEffect(
             ()=>{
@@ -25,16 +31,16 @@ useEffect(
 
     return (
        <React.Fragment>
-           {
-               <section className={style.rocketsPageContainer}>
-                    {rockets.map(
-                        (item:any)=>{
-                            return (
-                                <CardRocket item={item}></CardRocket>
-                                    )
-                        })
-                        }
-               </section>
+           { (Object.getOwnPropertyNames(selectedRocket).length===0)?
+                     (<section className={style.rocketsPageContainer}>
+                        {rockets.map(
+                            (item:any)=>{
+                                return (<CardRocket setSelectedRocket={setSelectedRocket} item={item}></CardRocket>)
+                            })
+                            }
+                   </section>)
+               :
+                (<RocketDetails selectedRocket={selectedRocket} setSelectedRocket={setSelectedRocket}></RocketDetails>)
            }
 
        </React.Fragment>
