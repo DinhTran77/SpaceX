@@ -5,7 +5,7 @@ import NavBar from '../NavBar/NavBar';
 
 const Header = () => {
     return (
-        <header className={style.mainHeader}>       
+        <header className={style.mainHeader}>
         </header>
     )
 }

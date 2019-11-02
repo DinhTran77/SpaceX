@@ -10,14 +10,14 @@ import videoOgv from '../../Images/video.ogv';
 import loadingGif from '../../Images/Loading.gif'
 import Loading from '../Loading/Loading';
 
-const Hero = (props:any) => {
+const Hero = (props: any) => {
     return (
         <React.Fragment>
             <section className={style.heroContainer}>
-                <h1>Space X News</h1>         
+                <h1>Space X News</h1>
                 <div className={style.overlay}></div>
 
-                <video controls className={style.video} muted loop autoPlay poster={videoPosterURL}>                
+                <video controls className={style.video} muted loop autoPlay poster={videoPosterURL}>
                     <source src={videoMp4} type="video/mp4"></source>
                     <source src={videoOgv} type="video/ogg"></source>
                     <source src={videoWebm} type='video/webm'></source>

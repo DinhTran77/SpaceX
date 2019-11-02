@@ -1,19 +1,18 @@
-.cardContainer
-{
+.cardContainer {
     background-clip: border-box;
     border-radius: 5px;
     height: auto;
     margin: 3% 0 3% 0;
     overflow: hidden;
-    background-color:white;
+    background-color: white;
 }
 
-.rocket{
+.rocket {
     width: auto;
     height: 70%;
 }
 
-.text{
+.text {
     font-weight: bold;
     padding: 15px 0 0 10px;
 }

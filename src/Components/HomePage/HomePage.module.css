@@ -1,22 +1,22 @@
-.heroContainer{
+.heroContainer {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.contentContainer{
+.contentContainer {
     height: 100%;
 }
 
-.grid{
+.grid {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.chevron{
+.chevron {
     width: 30%;
     position: absolute;
     z-index: 4;

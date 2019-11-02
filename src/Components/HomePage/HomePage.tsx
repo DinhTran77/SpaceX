@@ -9,31 +9,30 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import Loading from '../Loading/Loading';
 
 
-const HomePage = (props:any) => {
-    return (
-      <React.Fragment>
-        <section className={style.contentContainer}>
+const HomePage = (props: any) => {
+  return (
+    <React.Fragment>
+      <section className={style.contentContainer}>
 
-              <div className={style.heroContainer}>
-                
-                 <Hero/> 
-                 
-                 {props.isLoading?(<Loading className={style.loadingAnimation} isLoading={props.isLoading}></Loading>):(<FontAwesomeIcon icon={faChevronDown} className={style.chevron}/>)}
-                 
-              </div>
-            
-          
-              <div className={style.grid}>
-                      {props.news.map((item:any)=>
-                        {
-                        return(<CardHistory key={item.id} title={item.title} date={item.event_date_utc} details={item.details} wikiLink= {item.links.wikipedia}></CardHistory>)
-                        })
-                      }
-              </div>
+        <div className={style.heroContainer}>
 
-        </section>
-      </React.Fragment>
-    )
+          <Hero />
+
+          {props.isLoading ? (<Loading className={style.loadingAnimation} isLoading={props.isLoading}></Loading>) : (<FontAwesomeIcon icon={faChevronDown} className={style.chevron} />)}
+
+        </div>
+
+
+        <div className={style.grid}>
+          {props.news.map((item: any) => {
+            return (<CardHistory key={item.id} title={item.title} date={item.event_date_utc} details={item.details} wikiLink={item.links.wikipedia}></CardHistory>)
+          })
+          }
+        </div>
+
+      </section>
+    </React.Fragment>
+  )
 }
 
 export default HomePage

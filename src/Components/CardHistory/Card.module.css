@@ -1,5 +1,6 @@
-.cardContainer{
+.cardContainer {
     width: 60%;
+    height: 18vw;
     color: rgb(196, 194, 194);
     background-color: #181727;
     margin: 2% 0 2% 0;
@@ -7,15 +8,14 @@
     padding: 2%;
 }
 
-.cardContainer h2{
-text-transform: uppercase;
-font-weight: bold;
+.cardContainer h2 {
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
-.cardContainer h3{
+.cardContainer h3 {
     margin-top: 15px;
     margin-bottom: 15px;
     font-size: 1.2em;
     font-weight: bold;
 }
-

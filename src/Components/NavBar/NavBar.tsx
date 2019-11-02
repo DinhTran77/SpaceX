@@ -6,17 +6,17 @@ import { Link } from 'react-router-dom';
 const NavBar = () => {
     return (
         <React.Fragment>
-            <nav className={style.navBarContainer}>   
+            <nav className={style.navBarContainer}>
 
                 <div className={style.logoContainer}>
-                    <img className={style.logo} src={logo} alt="SpaceX logo"/>
-                </div>  
+                    <img className={style.logo} src={logo} alt="SpaceX logo" />
+                </div>
 
-                <ul className={style.navBar}> 
+                <ul className={style.navBar}>
                     <li><Link to='/'>History</Link></li>
                     <li><Link to='/rockets'>Rockets</Link></li>
                     <li><Link to='/about'>About</Link></li>
-                </ul>   
+                </ul>
 
             </nav>
         </React.Fragment>
