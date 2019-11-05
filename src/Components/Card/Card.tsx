@@ -48,7 +48,7 @@ const CardContainer = styled.div`
                     transform: scale(1);
                 }
                 to {
-                    transform: scale(2);
+                    transform: scale(1.25);
                 }
             }
         }
@@ -57,7 +57,7 @@ const CardContainer = styled.div`
             animation: unzoomImage 0.5s forwards;
             @keyframes unzoomImage {
                 from {
-                    transform: scale(2);
+                    transform: scale(1.25);
                 }
                 to {
                     transform: scale(1);
@@ -177,11 +177,9 @@ const CardContainer = styled.div`
 
             @keyframes reduceTextAreaHeight {
                 from {
-                    bottom: 0;
                     height: 132.4%;
                 }
                 to {
-                    bottom: 0;
                     height: 100%;
                 }
             }
