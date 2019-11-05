@@ -18,3 +18,8 @@ declare module "*.gif" {
     const fileName: string;
     export = fileName;
 }
+
+declare module "*.PNG";
+declare module "*.JPEG";
+declare module "*.jpg";
+declare module "*.png";
