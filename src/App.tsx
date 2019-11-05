@@ -2,8 +2,6 @@ import React, { useEffect, useState } from "react";
 import { Route, Switch, Redirect, Router } from "react-router-dom";
 import axios from "axios";
 import "normalize.css";
-import Header from "./Components/Header/Header";
-import CardHistory from "./Components/CardHistory/Card";
 import style from "./App.module.css";
 import { interpreterDirective } from "@babel/types";
 import HomePage from "./Components/HomePage/HomePage";

@@ -6,14 +6,10 @@ import styled from "styled-components";
 
 const NavBarStyle = styled.div`
     .header {
-        /* background: pink; */
         height: 4vw;
         width: 100%;
         display: flex;
         justify-content: flex-end;
-        /* position: absolute; */
-        /* position: relative; */
-        /* z-index: 11111111; */
         background: transparent;
         .navbar {
             display: flex;
@@ -21,11 +17,8 @@ const NavBarStyle = styled.div`
             align-items: center;
             width: auto;
             height: 100%;
-            /* background: black; */
-            /* position: absolute; */
             top: 0;
             padding-right: 4vw;
-            /* background: pink; */
             background: transparent;
             a {
                 font-size: 1.3vw;
@@ -59,8 +52,8 @@ const NavBar = () => {
             <NavBarStyle>
                 <header className="header">
                     <nav className="navbar">
-                        <a href="#">Home</a>
-                        <a href="#">Rockets</a>
+                        <Link to="/">Home</Link>
+                        <Link to="/rockets">Rockets</Link>
                     </nav>
                 </header>
             </NavBarStyle>

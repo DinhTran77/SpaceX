@@ -3,13 +3,11 @@ import styled from "styled-components";
 
 // Import Components
 import React from "react";
-import Header from "../Header/Header";
 import style from "./HomePage.module.css";
-import CardHistory from "../CardHistory/Card";
-import Hero from "../Hero/Hero";
+
 import NavBar from "../NavBar/NavBar";
 import Loading from "../Loading/Loading";
-import Card from "../Card/card/src/components/Card/Card";
+import Card from "../Card/Card";
 
 // Import Font Awesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -28,10 +26,9 @@ const Content = styled.div`
     background-size: cover;
     position: absolute;
     top: 0;
-    .container{
+    .container {
         height: 100%;
-        .hero 
-            {
+        .hero {
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -47,7 +44,7 @@ const Content = styled.div`
                 filter: drop-shadow(0px 0px 25px rgba(255, 255, 255, 1));
                 opacity: 0;
                 animation: fade-in-logo 2s 0.4s forwards;
-                }
+            }
             @keyframes fade-in-logo {
                 from {
                     opacity: 0;
@@ -56,12 +53,12 @@ const Content = styled.div`
                 to {
                     opacity: 1;
                 }
-                }
+            }
             .rocket {
                 width: 20vw;
                 z-index: 9;
                 position: absolute;
-                animation: move-in-rocket .3s 1.2s forwards ease-in;
+                animation: move-in-rocket 0.3s 1.2s forwards ease-in;
                 transform: translateY(41vw);
             }
 
@@ -74,17 +71,7 @@ const Content = styled.div`
                 }
             }
         }
-
-    
-
- 
-        }
-       
     }
-    
-    
-
-   
 `;
 const HomePage = (props: any) => {
     return (

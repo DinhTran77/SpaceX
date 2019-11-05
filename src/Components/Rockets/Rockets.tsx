@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import style from "./Rockets.module.css";
-import CardRocket from "../CardRocket/CardRocket";
-import RocketDetails from "../RocketDetails/RocketDetails";
 import Loading from "./../Loading/Loading";
-import Card from "./../Card/card/src/components/Card/Card";
+import Card from "../Card/Card";
 
 const Rockets = () => {
     const [rockets, setRockets] = useState([]);
@@ -32,47 +30,36 @@ const Rockets = () => {
 
     return (
         <React.Fragment>
-            {Object.getOwnPropertyNames(selectedRocket).length === 0 ? (
-                <section className={style.rocketsPageContainer}>
-                    {isLoading ? (
-                        <Loading></Loading>
-                    ) : (
-                        rockets.map((item: any) => {
-                            return (
-                                <React.Fragment>
-                                    <div className="container">
-                                        <div className="row">
-                                            <div className="col-lg-3">
-                                                <Card
-                                                    product={item.rocket_name}
-                                                    subtitle={
-                                                        item.payload_weights[0]
-                                                            .name
-                                                    }
-                                                    description={
-                                                        item.description
-                                                    }
-                                                    imgURL={
-                                                        item.flickr_images[0]
-                                                    }
-                                                    price={item.cost_per_launch}
-                                                ></Card>
-                                            </div>
+            <section className={style.rocketsPageContainer}>
+                {isLoading ? (
+                    <Loading></Loading>
+                ) : (
+                    rockets.map((item: any) => {
+                        return (
+                            <React.Fragment>
+                                <div className="container">
+                                    <div className="row">
+                                        <div className="col-lg-3">
+                                            <Card
+                                                product={item.rocket_name}
+                                                subtitle={
+                                                    item.payload_weights[0].name
+                                                }
+                                                description={item.description}
+                                                imgURL={item.flickr_images[0]}
+                                                price={item.cost_per_launch}
+                                            ></Card>
                                         </div>
                                     </div>
-                                </React.Fragment>
+                                </div>
+                            </React.Fragment>
 
-                                // <CardRocket setSelectedRocket={setSelectedRocket} item={item}></CardRocket>
-                            );
-                        })
-                    )}
-                </section>
-            ) : (
-                <RocketDetails
-                    selectedRocket={selectedRocket}
-                    setSelectedRocket={setSelectedRocket}
-                ></RocketDetails>
-            )}
+                            // <CardRocket setSelectedRocket={setSelectedRocket} item={item}></CardRocket>
+                        );
+                    })
+                )}
+            </section>
+            ) : )}
         </React.Fragment>
     );
 };
