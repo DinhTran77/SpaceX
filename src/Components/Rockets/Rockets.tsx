@@ -15,9 +15,7 @@ const RocketStyles = styled.div`
         width: 100vw;
         height: 100vh;
         overflow: scroll;
-        background-color: #d3dbde;
-        background: green;
-        display: absolute;
+        position: absolute;
         top: 0;
 
         .BootstrapContainer {
@@ -27,6 +25,8 @@ const RocketStyles = styled.div`
             display: flex;
             justify-content: center;
             align-items: center;
+            padding: 0;
+            margin: 0;
         }
         /* .column {
             margin: 2vw;
@@ -43,11 +43,10 @@ const Rockets = () => {
     const [selectedRocket, setSelectedRocket] = useState({});
     const [isLoading, setIsLoading] = useState(true);
 
-    window.onpopstate = e => {
+    window.onpopstate = (e: any) => {
         window.history.go(0);
     };
 
-    // hhhe
     useEffect(() => {
         const loadingTimer = setTimeout(() => {
             clearTimeout(loadingTimer);

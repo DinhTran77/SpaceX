@@ -35,7 +35,7 @@ const CardContainer = styled.div`
         color: red;
         display: flex;
         justify-content: center;
-        /* background: green; */
+
         img {
             width: auto;
             height: 100%;
@@ -116,11 +116,9 @@ const CardContainer = styled.div`
             bottom: 0;
 
             .price {
-                /* width: 40%; */
                 display: inline-block;
                 background: #e74c3c;
                 font-size: 1vw;
-                /* height: 13%; */
                 color: white;
                 padding: 4% 6%;
             }
@@ -137,16 +135,16 @@ const CardContainer = styled.div`
                     font-family: "helvetica";
                 }
                 h1 {
-                    font-size: 1.2em;
+                    font-size: 2vw;
                 }
 
                 h2 {
-                    font-size: 0.8em;
+                    font-size: 1.5vw;
                     color: #e74c3c;
                 }
 
                 p {
-                    font-size: 0.6em;
+                    font-size: 1vw;
                     font-family: "helvetica";
                     line-height: 1.5em;
                     color: rgb(59, 59, 59);
