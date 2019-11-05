@@ -1,5 +1,5 @@
 import React from "react";
-import loadingGif from "../../Images/Loading2.svg";
+import loadingAimation from "../../Images/Loading-elipse.svg";
 import { Animated } from "react-animated-css";
 import style from "./Loading.module.css";
 import styled from "styled-components";
@@ -13,11 +13,24 @@ const LoadingPageStyle = styled.div`
         align-items: center;
 
         .loadingAnimation {
-            width: 20vw;
+            width: 15vw;
             z-index: 4;
             font-size: 3em;
             color: white;
             margin: 0 auto;
+            position: absolute;
+        }
+
+        span {
+            color: #ffffff;
+            font-size: 1vw;
+            animation: blinker 2.75s linear infinite;
+        }
+
+        @keyframes blinker {
+            50% {
+                opacity: 0;
+            }
         }
     }
 `;
@@ -27,9 +40,11 @@ const Loading = (props: any) => {
             <div className="loadingPageContainer">
                 <img
                     className="loadingAnimation"
-                    src={loadingGif}
+                    src={loadingAimation}
                     alt="loading animation"
                 ></img>
+
+                <span>Loading...</span>
             </div>
         </LoadingPageStyle>
     );
