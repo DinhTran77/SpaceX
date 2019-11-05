@@ -42,7 +42,7 @@ const Rockets = () => {
                                 <React.Fragment>
                                     <div className="container">
                                         <div className="row">
-                                            <div className="col-lg-6">
+                                            <div className="col-lg-3">
                                                 <Card
                                                     product={item.rocket_name}
                                                     subtitle={
