@@ -11,6 +11,9 @@ import About from "./Components/About/About";
 // import Card from "./Components/Card/card";
 import styled from "styled-components";
 
+//import Bootstrap styles
+import "bootstrap/dist/css/bootstrap.min.css";
+
 const Container = styled.div`
     .pageContainer {
         display: flex;
@@ -24,6 +27,7 @@ const Container = styled.div`
         display: relative;
         overflow: hidden;
         height: 100%;
+        width: 100%;
     }
 `;
 

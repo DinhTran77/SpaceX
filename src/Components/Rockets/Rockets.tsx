@@ -3,6 +3,40 @@ import axios from "axios";
 import style from "./Rockets.module.css";
 import Loading from "./../Loading/Loading";
 import Card from "../Card/Card";
+import styled from "styled-components";
+import backgroundSpace from "../HomePage/images/space.jpg";
+import { Container, Row, Col } from "react-bootstrap";
+
+const RocketStyles = styled.div`
+    .rocketsPageContainer {
+        background-image: url(${backgroundSpace});
+        background-size: cover;
+        font-size: 0.8em;
+        width: 100vw;
+        height: 100vh;
+        overflow: scroll;
+        background-color: #d3dbde;
+        background: green;
+        display: absolute;
+        top: 0;
+
+        .BootstrapContainer {
+            width: 100%;
+            height: 100%;
+            max-width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        /* .column {
+            margin: 2vw;
+        } */
+    }
+
+    .loading {
+        width: 10%;
+    }
+`;
 
 const Rockets = () => {
     const [rockets, setRockets] = useState([]);
@@ -13,6 +47,7 @@ const Rockets = () => {
         window.history.go(0);
     };
 
+    // hhhe
     useEffect(() => {
         const loadingTimer = setTimeout(() => {
             clearTimeout(loadingTimer);
@@ -30,16 +65,16 @@ const Rockets = () => {
 
     return (
         <React.Fragment>
-            <section className={style.rocketsPageContainer}>
-                {isLoading ? (
-                    <Loading></Loading>
-                ) : (
-                    rockets.map((item: any) => {
-                        return (
-                            <React.Fragment>
-                                <div className="container">
-                                    <div className="row">
-                                        <div className="col-lg-3">
+            <RocketStyles>
+                <section className="rocketsPageContainer">
+                    <Container className="BootstrapContainer">
+                        <Row>
+                            {isLoading ? (
+                                <Loading></Loading>
+                            ) : (
+                                rockets.map((item: any) => {
+                                    return (
+                                        <Col lg={3} className="column">
                                             <Card
                                                 product={item.rocket_name}
                                                 subtitle={
@@ -49,17 +84,14 @@ const Rockets = () => {
                                                 imgURL={item.flickr_images[0]}
                                                 price={item.cost_per_launch}
                                             ></Card>
-                                        </div>
-                                    </div>
-                                </div>
-                            </React.Fragment>
-
-                            // <CardRocket setSelectedRocket={setSelectedRocket} item={item}></CardRocket>
-                        );
-                    })
-                )}
-            </section>
-            ) : )}
+                                        </Col>
+                                    );
+                                })
+                            )}
+                        </Row>
+                    </Container>
+                </section>
+            </RocketStyles>
         </React.Fragment>
     );
 };
