@@ -1,7 +1,6 @@
-.grid{
+/* .grid{
     display: grid;
     grid-template-columns: auto;
-    /* position:absolute; */
 }
 
 .pageContainer{
@@ -13,4 +12,4 @@
 .content{
     display: relative;
     overflow:hidden;
-}
+} */

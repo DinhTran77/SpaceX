@@ -11,6 +11,23 @@ import NavBar from "./Components/NavBar/NavBar";
 import Rockets from "./Components/Rockets/Rockets";
 import About from "./Components/About/About";
 // import Card from "./Components/Card/card";
+import styled from "styled-components";
+
+const Container = styled.div`
+    .pageContainer {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        /* background: blue; */
+        width: 100%;
+    }
+
+    .content {
+        display: relative;
+        overflow: hidden;
+        height: 100%;
+    }
+`;
 
 const App: React.FC = () => {
     const [news, setNews] = useState([]);
@@ -35,30 +52,30 @@ const App: React.FC = () => {
 
     return (
         <React.Fragment>
-            <section className={style.pageContainer}>
-                <NavBar></NavBar>
-                <section className={style.content}>
-                    <Switch>
-                        <Route
-                            exact
-                            path="/"
-                            render={props => (
-                                <HomePage isLoading={isLoading} news={news} />
-                            )}
-                        />
-                        <Route
-                            exact
-                            path="/rockets"
-                            render={props => <Rockets />}
-                        />
-                        {/* <Route
-                            exact
-                            path="/about"
-                            render={props => <About />}
-                        ></Route> */}
-                    </Switch>
+            <Container>
+                <section className="pageContainer">
+                    <NavBar></NavBar>
+                    <section className="content">
+                        <Switch>
+                            <Route
+                                exact
+                                path="/"
+                                render={props => (
+                                    <HomePage
+                                        isLoading={isLoading}
+                                        news={news}
+                                    />
+                                )}
+                            />
+                            <Route
+                                exact
+                                path="/rockets"
+                                render={props => <Rockets />}
+                            />
+                        </Switch>
+                    </section>
                 </section>
-            </section>
+            </Container>
         </React.Fragment>
     );
 };
