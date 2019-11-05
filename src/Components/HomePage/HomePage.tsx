@@ -42,18 +42,6 @@ const HomePage = (props: any) => {
                         );
                     })}
                 </div>
-                <Card
-                    product="Dinhs Product"
-                    subtitle="My great idea"
-                    description="Dinh The Falcon 1 was an expendable launch system
-            privately developed and manufactured by SpaceX
-            during 2006-2009. On 28 September 2008, Falcon 1
-            became the first privately-developed liquid-fuel
-            launch vehicle to go into orbit around the
-            Earth."
-                    imgURL="./images/rocket.jpg"
-                    price={9.99}
-                ></Card>
             </section>
         </React.Fragment>
     );

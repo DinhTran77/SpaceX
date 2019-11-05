@@ -51,11 +51,11 @@ const App: React.FC = () => {
                             path="/rockets"
                             render={props => <Rockets />}
                         />
-                        <Route
+                        {/* <Route
                             exact
                             path="/about"
                             render={props => <About />}
-                        ></Route>
+                        ></Route> */}
                     </Switch>
                 </section>
             </section>
