@@ -43,10 +43,10 @@ const Rockets = () => {
                                     <div></div>
                                     <Card
                                         product={item.rocket_name}
-                                        subtitle="My great idea"
+                                        subtitle={item.payload_weights[0].name}
                                         description={item.description}
                                         imgURL={item.flickr_images[0]}
-                                        price={9.99}
+                                        price={item.cost_per_launch}
                                     ></Card>
                                 </React.Fragment>
 
