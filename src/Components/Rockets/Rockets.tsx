@@ -40,14 +40,26 @@ const Rockets = () => {
                         rockets.map((item: any) => {
                             return (
                                 <React.Fragment>
-                                    <div></div>
-                                    <Card
-                                        product={item.rocket_name}
-                                        subtitle={item.payload_weights[0].name}
-                                        description={item.description}
-                                        imgURL={item.flickr_images[0]}
-                                        price={item.cost_per_launch}
-                                    ></Card>
+                                    <div className="container">
+                                        <div className="row">
+                                            <div className="col-lg-6">
+                                                <Card
+                                                    product={item.rocket_name}
+                                                    subtitle={
+                                                        item.payload_weights[0]
+                                                            .name
+                                                    }
+                                                    description={
+                                                        item.description
+                                                    }
+                                                    imgURL={
+                                                        item.flickr_images[0]
+                                                    }
+                                                    price={item.cost_per_launch}
+                                                ></Card>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </React.Fragment>
 
                                 // <CardRocket setSelectedRocket={setSelectedRocket} item={item}></CardRocket>
