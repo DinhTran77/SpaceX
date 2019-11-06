@@ -30,7 +30,7 @@ const NavBarStyle = styled.div`
                 text-shadow: 0px 0px 7px rgb(0, 0, 0);
                 opacity: 0;
                 filter: drop-shadow(5px 5px 5px #222);
-                animation: fade-in-navBar 0.8s 2s forwards;
+                animation: fade-in-navBar 0.8s 1.5s forwards;
             }
         }
 

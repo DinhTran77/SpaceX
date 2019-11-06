@@ -41,7 +41,7 @@ const Content = styled.div`
             overflow: hidden;
             position: relative;
             .logo {
-                width: 32%;
+                width: 35%;
                 z-index: 10;
                 filter: drop-shadow(0px 0px 25px rgba(255, 255, 255, 1));
                 opacity: 0;
@@ -69,7 +69,7 @@ const Content = styled.div`
                     top: 100vh;
                 }
                 to {
-                    top: ${topForAnimation}vh;
+                    top: ${centerRocket}vh;
                 }
             }
         }
