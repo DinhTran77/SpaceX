@@ -128,7 +128,7 @@ const CardContainer = styled.div`
                 height: 100%;
                 padding: 4% 11% 2% 11%;
                 /* margin-bottom: 14%; */
-                /* overflow: hidden; */
+                overflow: hidden;
                 h1,
                 h2 {
                     color: rgb(59, 59, 59);
@@ -151,7 +151,13 @@ const CardContainer = styled.div`
                     line-height: 1.5em;
                     color: rgb(59, 59, 59);
                     height: 110px;
-                    /* overflow: hidden; */
+                    scrollbar-width: none;
+                    /* Chrome */
+                    &::-webkit-scrollbar {
+                        display: none;
+                    }
+                    scrollbar-width: none;
+                    -ms-overflow-style: none;
                 }
             }
         }
@@ -264,6 +270,7 @@ const Card = ({ product, subtitle, description, imgURL, price }: Props) => {
                     <div className="text">
                         <h1>{product}</h1>
                         <h2>{subtitle}</h2>
+
                         <p className="description">{description}</p>
                     </div>
                 </div>
