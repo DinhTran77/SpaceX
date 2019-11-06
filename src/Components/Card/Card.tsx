@@ -127,7 +127,8 @@ const CardContainer = styled.div`
                 background: rgb(255, 255, 255);
                 height: 100%;
                 padding: 4% 11% 2% 11%;
-                overflow: hidden;
+                /* margin-bottom: 14%; */
+                /* overflow: hidden; */
                 h1,
                 h2 {
                     color: rgb(59, 59, 59);
@@ -149,7 +150,8 @@ const CardContainer = styled.div`
                     font-family: "helvetica";
                     line-height: 1.5em;
                     color: rgb(59, 59, 59);
-                    height: 150px;
+                    height: 110px;
+                    /* overflow: hidden; */
                 }
             }
         }
@@ -170,7 +172,7 @@ const CardContainer = styled.div`
 
                 to {
                     bottom: 0;
-                    height: 132.4%;
+                    height: 140%;
                 }
             }
         }
@@ -182,7 +184,7 @@ const CardContainer = styled.div`
 
             @keyframes reduceTextAreaHeight {
                 from {
-                    height: 132.4%;
+                    height: 140%;
                 }
                 to {
                     height: 100%;
@@ -243,6 +245,7 @@ const Card = ({ product, subtitle, description, imgURL, price }: Props) => {
                     isHover ? "image-overlay-ONHover" : "image-overlay-OFFHover"
                 }`}
             ></div>
+
             <div className="text-area-container">
                 <div
                     className={`text-area ${
