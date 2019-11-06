@@ -17,6 +17,9 @@ import backgroundSpace from "./images/space.jpg";
 import rocket from "./images/rocket.png";
 import logo from "./images/logo.svg";
 
+let rocketHeight = 60;
+let centerRocket = (100 - rocketHeight) / 2;
+
 const Content = styled.div`
     width: 100%;
     height: 100vh;
@@ -54,19 +57,19 @@ const Content = styled.div`
                 }
             }
             .rocket {
-                width: 20vw;
+                height: ${rocketHeight}vh;
                 z-index: 9;
                 position: absolute;
+                top: 100vh;
                 animation: move-in-rocket 0.3s 1.2s forwards ease-in;
-                transform: translateY(45vw);
             }
 
             @keyframes move-in-rocket {
                 from {
-                    transform: translateY(45vw);
+                    top: 100vh;
                 }
                 to {
-                    transform: translateY(0);
+                    top: ${topForAnimation}vh;
                 }
             }
         }
