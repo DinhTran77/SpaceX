@@ -7,9 +7,8 @@ export const NavBarStyle = styled.div`
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        /* background: transparent; */
+        background: transparent;
 
-        background: orange;
         .navbar {
             display: flex;
             justify-content: flex-end;
@@ -18,8 +17,6 @@ export const NavBarStyle = styled.div`
             height: 100%;
             top: 0;
             padding-right: 7vw;
-            /* background: transparent; */
-            background: pink;
             a {
                 font-size: 1.3vw;
                 z-index: 100;

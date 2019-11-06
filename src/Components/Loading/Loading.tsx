@@ -16,7 +16,7 @@ const Loading = (props: any) => {
                     alt="loading animation"
                 ></img>
 
-                <span>Loading...</span>
+                <span>Retrieving data...</span>
             </div>
         </LoadingPageStyle>
     );

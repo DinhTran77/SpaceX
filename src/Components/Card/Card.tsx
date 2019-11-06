@@ -59,12 +59,12 @@ const Card = ({ product, subtitle, description, imgURL, price }: Props) => {
                 >
                     <div className="price">
                         <NumberFormat
-                            value={price}
+                            value={Math.round(price / Math.pow(10, 6))}
                             displayType={"text"}
                             thousandSeparator={true}
                             prefix={"$"}
-                        />{" "}
-                        per launch
+                        />
+                        {" million/launch"}
                     </div>
                     <div className="text">
                         <h1>{product}</h1>
