@@ -19,6 +19,7 @@ interface Props {
 
 let cardWidth: number = 20;
 let cardHeight: number = cardWidth * 1.7;
+let animationSpeed: string = "500ms";
 
 const CardContainer = styled.div`
     background-size: 100% auto;
@@ -42,7 +43,7 @@ const CardContainer = styled.div`
         }
 
         .img-onHover {
-            animation: zoomImage 0.5s forwards;
+            animation: zoomImage ${animationSpeed} forwards;
             @keyframes zoomImage {
                 from {
                     transform: scale(1);
@@ -54,7 +55,7 @@ const CardContainer = styled.div`
         }
 
         .img-OffHover {
-            animation: unzoomImage 0.5s forwards;
+            animation: unzoomImage ${animationSpeed} forwards;
             @keyframes unzoomImage {
                 from {
                     transform: scale(1.25);
@@ -70,7 +71,7 @@ const CardContainer = styled.div`
         width: 100%;
         height: 100%;
         background: black;
-        background: #e74c3c;
+        background: black;
         position: absolute;
         top: 0;
         opacity: 0;
@@ -78,25 +79,25 @@ const CardContainer = styled.div`
 
     .image-overlay-ONHover {
         opacity: 0;
-        animation: increaseOpacity 0.1s forwards;
+        animation: increaseOpacity ${animationSpeed} forwards;
         @keyframes increaseOpacity {
             from {
                 opacity: 0;
             }
             to {
-                opacity: 0.2;
+                opacity: 0.3;
             }
         }
         opacity: 1;
     }
 
     .image-overlay-OFFHover {
-        opacity: 0.2;
-        animation: reduceOpacity 0.1s forwards;
+        opacity: 0.3;
+        animation: reduceOpacity ${animationSpeed} forwards;
         opacity: 1;
         @keyframes reduceOpacity {
             from {
-                opacity: 0.2;
+                opacity: 0.3;
             }
             to {
                 opacity: 0;
@@ -105,7 +106,7 @@ const CardContainer = styled.div`
     }
     .text-area-container {
         width: 100%;
-        height: 55%;
+        height: 60%;
         position: absolute;
         bottom: 0;
         .text-area {
@@ -126,14 +127,14 @@ const CardContainer = styled.div`
             .text {
                 background: rgb(255, 255, 255);
                 height: 100%;
-                padding: 4% 11% 2% 11%;
-                /* margin-bottom: 14%; */
+                padding: 4% 11% 2% 5%;
                 overflow: hidden;
+                /* background: grey; */
                 h1,
                 h2 {
                     color: rgb(59, 59, 59);
                     text-align: left;
-                    margin-bottom: 8%;
+                    margin-bottom: 4%;
                     font-family: "helvetica";
                 }
                 h1 {
@@ -150,8 +151,9 @@ const CardContainer = styled.div`
                     font-family: "helvetica";
                     line-height: 1.5em;
                     color: rgb(59, 59, 59);
-                    height: 110px;
+                    height: 48%;
                     scrollbar-width: none;
+                    /* background: pink; */
                     /* Chrome */
                     &::-webkit-scrollbar {
                         display: none;
@@ -165,7 +167,7 @@ const CardContainer = styled.div`
         .text-area-onHover {
             bottom: 0;
             height: 100%;
-            animation: increaseTextAreaHeight 1s forwards;
+            animation: increaseTextAreaHeight ${animationSpeed} forwards;
             p {
                 overflow: auto;
             }
@@ -178,19 +180,19 @@ const CardContainer = styled.div`
 
                 to {
                     bottom: 0;
-                    height: 140%;
+                    height: 125%;
                 }
             }
         }
 
         .text-area-offHover {
             bottom: 0;
-            height: 132.4%;
-            animation: reduceTextAreaHeight 1s forwards;
+            height: 120%;
+            animation: reduceTextAreaHeight ${animationSpeed} forwards;
 
             @keyframes reduceTextAreaHeight {
                 from {
-                    height: 140%;
+                    height: 120%;
                 }
                 to {
                     height: 100%;
