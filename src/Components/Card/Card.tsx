@@ -129,7 +129,7 @@ const CardContainer = styled.div`
                 height: 100%;
                 padding: 4% 11% 2% 5%;
                 overflow: hidden;
-                /* background: grey; */
+
                 h1,
                 h2 {
                     color: rgb(59, 59, 59);
@@ -153,7 +153,7 @@ const CardContainer = styled.div`
                     color: rgb(59, 59, 59);
                     height: 48%;
                     scrollbar-width: none;
-                    /* background: pink; */
+
                     /* Chrome */
                     &::-webkit-scrollbar {
                         display: none;

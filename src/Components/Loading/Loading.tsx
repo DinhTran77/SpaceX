@@ -12,12 +12,13 @@ const LoadingPageStyle = styled.div`
         justify-content: center;
         align-items: center;
 
+        background: grey;
         .loadingAnimation {
             width: 15vw;
             z-index: 4;
             font-size: 3em;
             color: white;
-            margin: 0 auto;
+            /* margin: 0 auto; */
             position: absolute;
         }
 
@@ -25,6 +26,7 @@ const LoadingPageStyle = styled.div`
             color: #ffffff;
             font-size: 1vw;
             animation: blinker 2.75s linear infinite;
+            position: absolute;
         }
 
         @keyframes blinker {
