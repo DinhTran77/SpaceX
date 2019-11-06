@@ -4,39 +4,10 @@ import style from "./Rockets.module.css";
 import Loading from "./../Loading/Loading";
 import Card from "../Card/Card";
 import styled from "styled-components";
-import backgroundSpace from "../HomePage/images/space.jpg";
+
 import { Container, Row, Col } from "react-bootstrap";
 
-const RocketStyles = styled.div`
-    .rocketsPageContainer {
-        background-image: url(${backgroundSpace});
-        background-size: cover;
-        font-size: 0.8em;
-        width: 100vw;
-        height: 100vh;
-        overflow: scroll;
-        position: absolute;
-        top: 0;
-
-        .BootstrapContainer {
-            width: 100%;
-            height: 100%;
-            max-width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 0;
-            margin: 0;
-        }
-        /* .column {
-            margin: 2vw;
-        } */
-    }
-
-    .loading {
-        width: 10%;
-    }
-`;
+import { RocketStyles } from "./RocketsStyles";
 
 const Rockets = () => {
     const [rockets, setRockets] = useState([]);

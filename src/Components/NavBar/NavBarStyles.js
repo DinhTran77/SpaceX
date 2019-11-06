@@ -2,11 +2,14 @@ import styled from "styled-components";
 
 export const NavBarStyle = styled.div`
     .header {
-        height: 4vw;
+        height: 10vh;
         width: 100%;
         display: flex;
         justify-content: flex-end;
-        background: transparent;
+        align-items: center;
+        /* background: transparent; */
+
+        background: orange;
         .navbar {
             display: flex;
             justify-content: flex-end;
@@ -14,8 +17,9 @@ export const NavBarStyle = styled.div`
             width: auto;
             height: 100%;
             top: 0;
-            padding-right: 4vw;
-            background: transparent;
+            padding-right: 7vw;
+            /* background: transparent; */
+            background: pink;
             a {
                 font-size: 1.3vw;
                 z-index: 100;
