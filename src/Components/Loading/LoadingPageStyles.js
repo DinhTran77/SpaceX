@@ -13,7 +13,6 @@ export const LoadingPageStyle = styled.div`
             z-index: 4;
             font-size: 3em;
             color: white;
-            /* margin: 0 auto; */
             position: absolute;
         }
 

@@ -1,5 +1,5 @@
 import React from "react";
-import loadingAimation from "../../Images/Loading-elipse.svg";
+import loadingAimation from "../Loading/images/Loading-elipse.svg";
 import { Animated } from "react-animated-css";
 import style from "./Loading.module.css";
 import styled from "styled-components";
