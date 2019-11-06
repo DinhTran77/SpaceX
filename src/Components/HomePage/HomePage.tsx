@@ -11,7 +11,6 @@ import Card from "../Card/Card";
 
 // Import Font Awesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 // Import Images
 import backgroundSpace from "./images/space.jpg";
@@ -59,12 +58,12 @@ const Content = styled.div`
                 z-index: 9;
                 position: absolute;
                 animation: move-in-rocket 0.3s 1.2s forwards ease-in;
-                transform: translateY(41vw);
+                transform: translateY(45vw);
             }
 
             @keyframes move-in-rocket {
                 from {
-                    transform: translateY(41vw);
+                    transform: translateY(45vw);
                 }
                 to {
                     transform: translateY(0);
