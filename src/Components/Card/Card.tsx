@@ -127,6 +127,7 @@ const CardContainer = styled.div`
                 background: rgb(255, 255, 255);
                 height: 100%;
                 padding: 4% 11% 2% 11%;
+                overflow: hidden;
                 h1,
                 h2 {
                     color: rgb(59, 59, 59);
@@ -148,6 +149,7 @@ const CardContainer = styled.div`
                     font-family: "helvetica";
                     line-height: 1.5em;
                     color: rgb(59, 59, 59);
+                    height: 150px;
                 }
             }
         }
@@ -156,6 +158,9 @@ const CardContainer = styled.div`
             bottom: 0;
             height: 100%;
             animation: increaseTextAreaHeight 1s forwards;
+            p {
+                overflow: auto;
+            }
 
             @keyframes increaseTextAreaHeight {
                 from {
@@ -191,7 +196,7 @@ const CardContainer = styled.div`
         background: rgb(255, 255, 255);
         display: flex;
         width: 100%;
-        height: 15%;
+        height: 13%;
         position: absolute;
         bottom: 0;
         align-items: center;
