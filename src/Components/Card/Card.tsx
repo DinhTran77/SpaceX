@@ -111,7 +111,7 @@ const CardContainer = styled.div`
         bottom: 0;
         .text-area {
             height: 100%;
-            font-size: 0.8em;
+            font-size: 1vw;
             overflow: hidden;
             position: absolute;
             bottom: 0;
@@ -211,7 +211,7 @@ const CardContainer = styled.div`
         bottom: 0;
         align-items: center;
         padding: 0 11%;
-        font-size: 0.8em;
+        font-size: 1vw;
         .favouriteFalse {
             color: #9b9999;
         }

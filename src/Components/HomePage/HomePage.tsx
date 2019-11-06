@@ -17,13 +17,12 @@ import backgroundSpace from "./images/space.jpg";
 import rocket from "./images/rocket.png";
 import logo from "./images/logo.svg";
 
-let rocketHeight = 60;
+let rocketHeight = 75;
 let centerRocket = (100 - rocketHeight) / 2;
 
 const Content = styled.div`
     width: 100%;
     height: 100vh;
-    background: orange;
     background-image: url(${backgroundSpace});
     background-size: cover;
     position: absolute;
