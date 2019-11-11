@@ -8,7 +8,7 @@ import Loading from "../Loading/Loading";
 import Card from "../Card/Card";
 
 // Import Font Awesome
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { FontAwesomeIcon } from "@jest/@fortawesome/react-fontawesome";
 
 // Import Images
 import rocket from "./images/rocket.png";

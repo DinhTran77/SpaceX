@@ -2,11 +2,15 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import NumberFormat from "react-number-format";
 
+// import { FontAwesomeIcon } from "@jest/@fortawesome/react-fontawesome";
+// import {
+//     faShoppingCart,
+//     faGreaterThanEqual
+// } from "@jest/@fortawesome/free-solid-svg-icons";
+// import { faHeart } from "@jest/@fortawesome/free-solid-svg-icons";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-    faShoppingCart,
-    faGreaterThanEqual
-} from "@fortawesome/free-solid-svg-icons";
+import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 
 import { CardContainer } from "./CardStyles";
