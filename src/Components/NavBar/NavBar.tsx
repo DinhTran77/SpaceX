@@ -11,7 +11,7 @@ const NavBar = () => {
             <NavBarStyle>
                 <header className="header">
                     <nav className="navbar">
-                        <Link to="/">Home</Link>
+                        <Link to="/">Dinh</Link>
                         <Link to="/rockets">Rockets</Link>
                     </nav>
                 </header>
