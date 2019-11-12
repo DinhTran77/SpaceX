@@ -19,7 +19,9 @@ https://space-x-api.herokuapp.com/
 ---
 
 ## Description
+
 A React app that fetches data from the SpaceX api and places data into a custom card.
+
 ---
 
 ## Installation
