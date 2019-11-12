@@ -5,16 +5,19 @@ SpaceX API and custom React card.
 
 ---
 
-# Live Preview
-https://space-x-api.herokuapp.com/
 
----
 
 ## Table of contents 
+- [Live Preview](#live-preview) 
 - [Description](#description)
 - [Installation](#installation)
 - [How to use](#how-to-use)
 - [License](#installation)
+
+---
+
+## Live Preview
+https://space-x-api.herokuapp.com/
 
 ---
 
