@@ -11,7 +11,6 @@ SpaceX API and custom React card.
 - [Live Preview](#live-preview) 
 - [Description](#description)
 - [Installation](#installation)
-- [How to use](#how-to-use)
 - [License](#installation)
 
 ---
@@ -35,11 +34,6 @@ A React app that fetches data from the SpaceX api and places data into a custom 
 
 ---
 
-## How to use
-
-Press the on-screen keypads with mouse or use keyboard keys (Q, W, E, A, S, D, Z, X, C).
-
----
 
 ## License
 Copyright 2019. Dinh Tran
