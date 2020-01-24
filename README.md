@@ -1,4 +1,4 @@
-# SpaceX API with custom React card.
+# SpaceX API with custom React card
 
 ![SpaceX project image](/src/Images/SpaceX.jpg) 
 
