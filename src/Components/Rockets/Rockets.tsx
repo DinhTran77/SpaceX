@@ -51,7 +51,7 @@ const Rockets = () => {
                                                     item.payload_weights[0].name
                                                 }
                                                 description={item.description}
-                                                imgURL={item.flickr_images[0]}
+                                                imgURL={item.flickr_images[1]}
                                                 price={item.cost_per_launch}
                                             ></Card>
                                         </Col>
